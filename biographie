@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Biographie / Portfolio</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Portfolio: Justin S.</h1>
+        <img src="https://jmpswork.github.io/ownage.png">
+        <p>Bonjour! Mon nom est Justin et j'aime tous reliés aux ordinateurs.<br></p>
+        <p>Voici les langages de programmation que j'ai de l'expérience avec:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Langage de programmation</th>
+              <th>Expérience</th>
+              <th>Habileté</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Python</td>
+              <td>Beaucoup</td>
+              <td>Advanced</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>Peux</td>
+              <td>Beginner</td>
+            </tr>
+            <tr>
+              <td>SQL</td>
+              <td>Peux</td>
+              <td>Intermediate</td>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td>Peux</td>
+              <td>Beginner</td>
+            </tr>
+          </tbody>
+        </table>
+    </body>
+</html>
