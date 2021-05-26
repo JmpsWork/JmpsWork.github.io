@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Inscription</title>
+ </head>
+ <body>
+   <form>
+    <h1>Test</h1>
+    <label for="amount">Premier nom:</label>
+    <input type="text" id="premierNom"><br>
+    <label for="amount">Deuxieme nom:</label>
+    <input type="text" id="milieuNom"><br>
+    <label for="amount">Dernier nom:</label>
+    <input type="text" id="dernierNom"><br>
+ 
+    <input type="button" id="btnInitials" onclick="afficheInitiales()"  value="Afficher initiales">
+    <input type="button" id="btnFullName" onclick="afficheNom()"  value="Afficher nom au complet">
+    <input type="button" id="btnUserName" onclick="afficheNomUser()"  value="Afficher n'om d'utilisateur">
+ 
+    <div id="divAffiche">
+ 
+    </div>
+ 
+   </form>
+   <script>
+    function afficheInitiales() {
+      // Retirer les noms de l'utilisateur
+      var premierNom = document.getElementById("premierNom").value;
+      var milieuNom = document.getElementById("milieuNom").value;
+      var dernierNom = document.getElementById("dernierNom").value;
+      var affiche = document.getElementById("divAffiche");
+      
+      var initialles = premierNom[0] + ". " + milieuNom[0] + ". " + dernierNom[0] + ".";
+      // Message complet
+      var message = "<br><br> " + initialles + "<br><br>";
+      affiche.innerHTML = message;
+    }
+    function afficheNom() {
+      // Retirer les noms de l'utilisateur
+      var premierNom = document.getElementById("premierNom").value;
+      var milieuNom = document.getElementById("milieuNom").value;
+      var dernierNom = document.getElementById("dernierNom").value;
+      var affiche = document.getElementById("divAffiche");
+      
+      var nomComplet = premierNom + " " + milieuNom + " " + dernierNom;
+      // Message complet
+      var message = "<br><br> " + nomComplet + "<br><br>";
+      affiche.innerHTML = message;
+    }
+    function afficheNomUser() {
+      // Retirer les noms de l'utilisateur
+      var premierNom = document.getElementById("premierNom").value;
+      var milieuNom = document.getElementById("milieuNom").value;
+      var dernierNom = document.getElementById("dernierNom").value;
+      var affiche = document.getElementById("divAffiche");
+      
+      var initialles = premierNom[0] + ". " + milieuNom[0] + ". " + dernierNom[0] + ".";
+      var nomComplet = premierNom + " " + milieuNom + " " + dernierNom;
+      var nomUser = "Nom d'utilisateur: " + premierNom[0].toLowerCase() + milieuNom[0].toLowerCase() + dernierNom.toLowerCase();
+      // Message complet
+      var message = "<br><br> " + nomUser + "<br><br>";
+      affiche.innerHTML = message;
+    }
+   </script>
+ </body>
+</html>
