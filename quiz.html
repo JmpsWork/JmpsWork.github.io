@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>Quiz</title>
+   <link href="style.css" rel="stylesheet" type="text/css" />
+ </head>
+ <body>
+   <form>
+     <h1>Quiz</h1>
+ 
+     <label for="q1">Question 1: Combien d'élèves y a t'il dans ce classe?<br></label>
+     <span id="selRange">0</span>
+     <input id="q1r" type="range" min="0" max="14" step="1" value="7" />
+     <span id="selRange">14</span><br><br>
+ 
+     <label for="q2rt">Question 2: Qui enseigne ce cours?</label><br><br>
+     <input type="radio" name="q2r" value="m">Van Mao Le
+     <input type="radio" name="q2r" value="m">Mahmoud Almalki
+     <input type="radio" name="q2r" value="b" checked>Katerine Barbieri
+     <br><br>
+ 
+     <label for="q3">Question 3: Quelle leçon est en apprentissage maintenant?</label><br><br>
+     <input type="number" id="q3r"><br><br>
+     <input type="button" onclick="verifierReponse()" value="Soumettre!" style="color:red; font-weight:bold; padding:5px 10px;" />
+ 
+     <div id="divAffiche">
+ 
+     </div>
+   </form>
+ 
+   <script src="script.js"></script>
+ </body>
+</html>
