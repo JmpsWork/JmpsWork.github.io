@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>E-Magasin: Roches</title>
+    <!--J'ai essayé d'utilisé du CSS pour rendre le site web plus lisable-->
+    <style>
+    h1 {text-align: center;}
+    div {text-align: center;}
+    p.textGros {font: 17px Arial}
+    .sectionIntroduction {background-color: rgb(220, 220, 220); margin: 14px;}
+    .sectionAchats {background-color: rgb(220, 220, 220); margin: 14px;}
+    .achatItem {background-color: rgb(200, 200, 200); display: inline-block; margin: 6px; padding:12px; border: solid rgb(180, 180, 180)}
+    .panierAchats {background-color: rgb(240, 220, 220); margin: 14px;}
+    .panierItem {background-color: rgb(240, 200, 200); display: inline-block; margin: 6px; padding:12px; border: 4px solid rgb(240, 180, 180);}
+    .sectionReceipt {background-color: rgb(200, 200, 240); margin: 14px; padding: 6px;}
+    .receiptItem {background-color: rgb(180, 180, 220); margin: 20px; padding:4px 20px;}
+    </style>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!--Introduction au site web-->
+    <h1>Premium Rocks</h1>
+    <div class="sectionIntroduction">
+      <p class="textGros" style="font-weight:bold; padding:10px 20px;">
+        Bonjour au site web <i>Premium Rocks</i>!<br>
+        Ici, on vend une grande quantité et variété de roches à des prix très abordables.
+      </p>
+      <img src="rocks.png" alt="Roches.png" height="200">
+    </div>
+    <!--
+      div pour les boutons d'achats de produits, la classe détermine comment
+      afficher ce div défini dans le style dans <head>
+    -->
+    <div class="sectionAchats">
+       <form>
+        <!--div pour chaque produit individuel-->
+        <div class="achatItem">
+          <p class="textGros">Granite<br>100g</p>
+          <input type="button" value="0.10$" onclick="ajouteAchat(0)"
+          style="color:coral; font-weight:bold; padding:10px 20px;"><br><br>
+        </div>
+
+        <div class="achatItem">
+          <p class="textGros">Marbre<br>100g</p>
+          <input type="button" value="0.15$" onclick="ajouteAchat(1)"
+          style="color:coral; font-weight:bold; padding:10px 20px;"><br><br>
+        </div>
+
+        <div class="achatItem">
+          <p class="textGros">Quartz<br>50g</p>
+          <input type="button" value="0.75$" onclick="ajouteAchat(2)"
+          style="color:coral; font-weight:bold; padding:10px 20px;"><br><br>
+        </div>
+
+        <div class="achatItem">
+          <p class="textGros">Zircon<br>50g</p>
+          <input type="button" value="25.00$" onclick="ajouteAchat(3)"
+          style="color:coral; font-weight:bold; padding:10px 20px;"><br><br>
+        </div>
+
+        <div class="achatItem">
+          <p class="textGros">Émeraude<br>50g</p>
+          <input type="button" value="115.00$" onclick="ajouteAchat(4)"
+          style="color:coral; font-weight:bold; padding:10px 20px;"><br><br>
+        </div>
+
+        <div class="achatItem">
+          <p class="textGros">Diamant<br>5g</p>
+          <input type="button" value="15000.00$" onclick="ajouteAchat(5)"
+          style="color:coral; font-weight:bold; padding:10px 20px;"><br><br>
+        </div>
+
+        <div class="achatItem">
+          <p class="textGros">Amiante<br>500g</p>
+          <input type="button" value="14.99$" onclick="ajouteAchat(6)"
+          style="color:coral; font-weight:bold; padding:10px 20px;"><br><br>
+        </div>
+
+      </form> 
+    </div>
+
+    <!--div pour les achats de produits-->
+    <div class="panierAchats" id="panierAchats">
+      <h2>Panier</h2>
+    </div>
+
+    <!--div pour afficher le reçu ou receipt et pour entrer les informations de livraisons-->
+    <div class="sectionReceipt" id="sectionReceipt">
+      <h2>Entré informations de livraisons ici</h2>
+      <div class="sectionReceipt" style="padding:4px 20px; text-align: left;">
+        <form>
+          <!--Date de livraison, province choisi et le montant d'argent que le client veut payer-->
+          <span>Date de livraison:</span>
+          <input type="date" id="dateLivraison"><br><br>
+
+          <span>Province:</span>
+          <select id="prov">
+            <option value="ON">Ontario</option>
+            <option value="QC">Québec</option>
+            <option value="BC">Colombie Britannique</option>
+          </select><br><br>
+
+          <span>Montant d'argent à donnée:</span>
+          <input type="number" id="dollarDonne" min="0" value="0"><br><br>
+
+          <input type="button" value="Afficher Reçu" onclick="printRecu()"
+          style="text-align: center; font-weight:bold; padding:16px 32px;">
+        </form>
+      </div>
+      <div class="receiptItem" id="receipt">
+        <h3>Reçu</h3>
+        <p class="textGros" style="padding:4px 20px; text-align: left;">
+          Aucun item dans le panier.
+        </p>
+      </div>
+    </div>
+
+    <!--Utilise la meme couleur que le section d'achats, ceci est pour les informations importantes-->
+    <div class="sectionAchats">
+      <h2>Détails de prix</h2>
+      <p style="font-weight:bold; padding:10px 20px;">
+      La prix de livraison est un base de 10$. Pour les livraisons de moins que 5 jours d'ajourdhui, le prix de base est de 45$.<br><br>
+      Paiement peut aussi prendre forme d'un montant spécifié dans les informations de livraisons.<br><br>
+      </p>
+    </div>
+
+    <script src="magasin.js"></script>
+  </body>
+</html>
