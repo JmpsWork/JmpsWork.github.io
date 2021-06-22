@@ -278,37 +278,37 @@ function afficheLigne(y, longeur) {
     if (!ceCase.estReveler) {  // Si ce n'est pas reveler,
       if (ceCase.estMarquer) {
         // La première image est au dessus du class
-        caseHTML += `<img src="mine_flag.png" class="${imgClass}">`;
+        caseHTML += `<img src="https://jmpswork.github.io/mine_flag.png" class="${imgClass}">`;
       }
       // Si le jeux est terminé, ont affiche les mines
       else if (ceCase.estMine && jeuxPerdu || restantPasReveler === 0) {
         if (ceCase.x === minePerduXY[0] && ceCase.y === minePerduXY[1]) {
-          caseHTML += `<img src="mine_on.png" class="${imgClass}">`;
+          caseHTML += `<img src="https://jmpswork.github.io/mine_on.png" class="${imgClass}">`;
         }
         else {
-          caseHTML += `<img src="mine_off.png" class="${imgClass}">`;
+          caseHTML += `<img src="https://jmpswork.github.io/mine_off.png" class="${imgClass}">`;
         }
       }
       // Si ce case est adjacent à des mines et le jeux est perdu, ont affiche le nombre de mines adjacent
       else if (ceCase.adjacent > 0 && jeuxPerdu) {
-        caseHTML += `<img src="${ceCase.adjacent}.png" class="${imgClass}">`;
+        caseHTML += `<img src="https://jmpswork.github.io/${ceCase.adjacent}.png" class="${imgClass}">`;
       }
       // Si il y a rien sur ce case, ont affiche seulement un case vide
       else {
-        caseHTML += "<td><img src=\"tile.png\"></td>";
+        caseHTML += "<td><img src=\"https://jmpswork.github.io/tile.png\"></td>";
       }
     }
     else {
       if (ceCase.estMine) {  // Si il y a un mine
-        caseHTML += `<img src="mine_off.png" class="${imgClass}">`;
+        caseHTML += `<img src="https://jmpswork.github.io/mine_off.png" class="${imgClass}">`;
       }
       // Si ce case est adjacent à des mines , ont affiche le nombre de mines adjacent
       else if (ceCase.adjacent != 0) {
-        caseHTML += `<img src="${ceCase.adjacent}.png" class="${imgClass}">`;
+        caseHTML += `<img src="https://jmpswork.github.io/${ceCase.adjacent}.png" class="${imgClass}">`;
       // Si il n'y a rien sur ce case, ont affiche le case révéler vide
       }
       else {
-        caseHTML += "<td><img src=\"tile_revealed.png\">";
+        caseHTML += "<td><img src=\"https://jmpswork.github.io/tile_revealed.png\">";
       }
     }
     caseHTML += "</button></td>";
