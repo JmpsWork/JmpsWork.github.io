@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<center>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Minesweeper 2.0</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+ 
+    <h1>Minesweeper 2.0</h1>
+    <form>
+      Longeur du grille: <input type='number' onchange="afficheNombresMines()" value='10' min='6' max='40' placeholder='Longeur:' id='longeur' onkeypress="return false;"/><br>
+      Largeur du grille: <input type='number' onchange="afficheNombresMines()" value='10' min='6' max='40' placeholder='Largeur:' id='largeur' onkeypress="return false;"/><br>
+      Pourcentage de mines sur la grille: <input type='number' onchange="afficheNombresMines()" value='10' min='1' max='40' placeholder='Pourcentage de mines:' id='pourcentage' style='text-align: right
+      ;' onkeypress="return false;"/>%<br>
+      <div id="mineTexte">Mines: 10</div><br>
+      <input type='button' value='Commencer!' onclick='creeTableau()'/><br><br>
+    </form>
+<br><br>
+
+    <!--Le texte qui dit si vous avez gagnez ou perdu-->
+    <div id="perduTexte" class="perduTexte">
+    </div>
+
+    <!--La grille du jeux-->
+    <div id="tableau" class="tableau" oncontextmenu="return false;">
+      <table cellspacing="0" cellpadding="0" colspan="0">
+        <div id="grille">
+          
+        </div>
+      </table>
+    </div>
+
+    <!--Des informations pour apprendre à comment jouer-->
+    <div>
+      <h2>Contrôles</h2>
+      <p><strong>
+      Click pour reveler une case <img src="tile_revealed.png"><br>
+      Click-droite sur une case pour le marquer <img src="mine_flag.png"><br>
+      Reveler toute la grille sans touchant une mine! <img src="mine_off.png"><br>
+      </strong></p>
+    </div>
+
+    <div>
+      <h2>Crédits</h2>
+      <p><strong>
+      Ryan Awad, Alexandre Laporte, Justin Solomon
+      </strong></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+ </center>
+</html>
