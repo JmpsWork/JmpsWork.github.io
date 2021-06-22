@@ -8,10 +8,10 @@ table {
   border-collapse: collapse;
 }
 .pasreveler {
-  background-image: url("tile.png")
+  background-image: url("https://jmpswork.github.io/tile.png")
 }
 .reveler {
-  background-image: url("tile_revealed.png")
+  background-image: url("https://jmpswork.github.io/tile_revealed.png")
 }
 img {
   vertical-align: bottom;
