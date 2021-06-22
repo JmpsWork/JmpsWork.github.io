@@ -25,9 +25,9 @@ var restantPasReveler = 0;  // Nombre de cases qui ne sont pas reveler
 var minePerduXY = [0, 0]
 
 // Sons pour le jeux
-var sondClick = new Audio("click.wav");
-var sondExplosion = new Audio("explode.wav");
-var sondMarque = new Audio("mark.wav");
+var sondClick = new Audio("https://jmpswork.github.io/click.wav");
+var sondExplosion = new Audio("https://jmpswork.github.io/explode.wav");
+var sondMarque = new Audio("https://jmpswork.github.io/mark.wav");
 sondClick.volume = 0.4;  // Pourcentage du volume, ex: 0.4 = 40% du volume normale
 sondExplosion.volume = 0.25;
 sondMarque.volume = 0.4;
